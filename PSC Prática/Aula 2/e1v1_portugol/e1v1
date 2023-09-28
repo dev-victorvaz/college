@@ -1,0 +1,41 @@
+programa {
+    funcao inicio(){
+        // Declaração de variáveis
+        real boleto1, boleto2, salarioBruto, salarioLiquido, disponivel
+        cadeia nomeCredor
+        inteiro diaVencimento1, diaVencimento2, mesVencimento1, mesVencimento2, anoVencimento1, anoVencimento2, diaPago1, diaPago2, mesPago1, mesPago2, anoPago1, anoPago2, diferenca1, diferenca2
+        
+        // Entrada de dados
+        escreva("Informe seu nome completo: ")
+        leia(nomeCredor)
+        
+        escreva("Informe o seu salário bruto: ")
+        leia(salarioBruto)
+        
+        escreva("Informe o valor do primeiro boleto: ")
+        leia(boleto1)
+        escreva("Informe a data de vencimento do primeiro boleto: ")
+        leia(diaVencimento1, mesVencimento1, anoVencimento1)
+        escreva("Informe a data de pagamento do primeiro boleto: ")
+        leia(diaPago1, mesPago1, anoPago1)
+        
+        escreva("Informe o valor do segundo boleto: ")
+        leia(boleto2)
+        escreva("Informe a data de vencimento do segundo boleto: ")
+        leia(diaVencimento2, mesVencimento2, anoVencimento2)
+        escreva("Informe a data de pagamento do segundo boleto: ")
+        leia(diaPago2, mesPago2, anoPago2)
+        
+        // Processamento de dados
+        salarioLiquido = salarioBruto * 0.70
+        
+        diferenca1 = (diaVencimento1 + mesVencimento1 * 30 + anoVencimento1 * 365) - (diaPago1 + mesPago1 * 30 + anoPago1 * 365)
+        diferenca2 = (diaVencimento2 + mesVencimento2 * 30 + anoVencimento2 * 365) - (diaPago2 + mesPago2 * 30 + anoPago2 * 365)
+        
+        disponivel = salarioLiquido - boleto1 - boleto2
+        
+        // Saída de dados
+        escreva("Olá ", nomeCredor, ", seu salário líquido é de R$", salarioLiquido, " e você terá R$", disponivel, " disponíveis após os boletos serem pagos.\n")
+        escreva("Ainda falta ", diferenca1, " dias restantes para o vencimento do primeiro boleto e ", diferenca2, " dias restantes para o vencimento do segundo boleto.")
+    }
+}

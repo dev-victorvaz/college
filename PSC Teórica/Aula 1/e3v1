@@ -1,0 +1,22 @@
+programa {
+    funcao inicio(){
+        // Desenvolva um algoritmo em fluxograma que receba o nome, a altura e peso de uma pessoa, calcule o IMC dela e imprima o resultado na tela;
+        // Declaração de variáveis
+        cadeia nome
+        real altura, peso, imc
+        
+        // Entrada de dados
+        escreva("Infome seu nome: ")
+        leia(nome)
+        escreva("Informe sua altura em metros: ")
+        leia(altura)
+        escreva("Informe seu peso em kg: ")
+        leia(peso)
+        
+        // Processamento de dados
+        imc = peso / (altura * altura)
+        
+        // Saída de dados
+        escreva("O IMC de ", nome, " é de ", imc, ".")
+    }
+}
